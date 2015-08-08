@@ -1,0 +1,115 @@
+<html>
+  <head>
+    <!-- Pull in bootstrap then my own css -->
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <title>My Favorite Animals</title>
+  </head>
+  <body>
+    <!-- div that holds the whole page -->
+    <div class="container">
+
+      <!-- Big title at the top -->
+      <div class="jumbotron">
+        <h1>My Favorite Things <small>Just a Few of Them</small></h1>
+      </div>
+
+      <!--div to represent the left sidebar -->
+      <div class="col-md-3 well">
+        <!-- Navigation menu -->
+        <h2>Categories</h2>
+        <ul class="list-group">
+          <li class="list-group-item" id="menu-animals">
+            <span class="badge">3</span>
+            Animals
+          </li>
+          <li class="list-group-item" id="menu-food">
+            <span class="badge">1</span>
+            Food
+          </li>
+          <li class="list-group-item" id="menu-movies">
+            <span class="badge">2</span>
+            Movies
+          </li>
+        </ul>
+
+        <!-- Form where users can add new things -->
+        <h2>Add Item</h2>
+        <form>
+          <div class="form-group">
+            <select id="type" class="form-control">
+              <option value="animals">Animal</option>
+              <option value="food">Food</option>
+              <option value="movies">Movie</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <input type="text" id="item" class="form-control" placeholder="Describe the favorite thing"/>
+            <div class="alert alert-danger" style="display: none;" id="item-error">
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-default">Add</button>
+        </form>
+      </div>
+
+      <!-- The main body of the page -->
+      <div class="col-md-9">
+        <!-- Panel section for Animals -->
+        <div class="panel panel-default" id="animals">
+          <div class="panel-heading">
+            <h3 class="panel-title">Animals</h3>
+          </div>
+          <div class="panel-content">
+            <ul class="favorite-list">
+              <li>Cats <span class="glyphicon glyphicon-trash delete" data-name="Cats" aria-hidden="true"></span></li>
+              <li>Dogs</li>
+              <li>Turtles</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Panel section for Food -->
+        <div class="panel panel-default" id="food">
+          <div class="panel-heading">
+            <h3 class="panel-title">Food</h3>
+          </div>
+          <div class="panel-content">
+            <ul class="favorite-list">
+              <li>Coffee</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Panel section for Movies -->
+        <div class="panel panel-default" id="movies">
+          <div class="panel-heading">
+            <h3 class="panel-title">Movies</h3>
+          </div>
+          <div class="panel-content">
+            <ul class="favorite-list">
+              <li>Hackers</li>
+              <li>The Matrix</li>
+            </ul>
+          </div>
+        </div>
+      </div> <!-- end of main body -->
+    </div> <!-- end of .container -->
+
+    <!-- Source in external JavaScript libraries -->
+    <script src="js/jquery-1.11.1.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+    <!-- Source in my own JavaScript files -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
